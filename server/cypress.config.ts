@@ -1,5 +1,4 @@
 import { defineConfig } from "cypress";
-import customViteConfig from './vite.config'
 
 export default defineConfig({
   e2e: {
@@ -12,12 +11,6 @@ export default defineConfig({
     devServer: {
       framework: "react",
       bundler: "vite",
-      viteConfig: customViteConfig,
     },
-    specPattern: "cypress/component/**/*.cy.{js,ts,jsx,tsx}",
   },
 });
-module.exports = {
-  projectId: "pjz4ro",
-  // ...rest of the Cypress project config
-}

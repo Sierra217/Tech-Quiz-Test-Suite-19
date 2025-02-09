@@ -7,7 +7,7 @@ describe('Quiz e2e flow', () => {
         cy.get('button').contains('Start Quiz').should('be.visible').click();
         cy.wait('@getQuestions');
         cy.fixture('questions.json').then((questions) => {
-            questions.forEach((_, index: number) => {
+            questions.forEach((_: any, index: number) => {
                 cy.get('button').contains(/\d+/).first().click();
                 if (index < questions.length - 1) {
                     cy.get('button').contains('Next Question').should('be.visible').click();
